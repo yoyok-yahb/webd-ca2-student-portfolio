@@ -1,0 +1,239 @@
+body {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 72px;
+    color: white;
+    font-family: "Google Sans Flex", sans-serif;
+    font-weight: 500;
+    font-variation-settings: 
+        "wdth" 100,
+        "ROND" 100;
+}
+
+/* Navigation Bar */
+
+navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 16px;
+    position: sticky;
+
+    font-family: "Google Sans Flex", sans-serif;
+    font-variation-settings: 
+        "wdth" 100,
+        "ROND" 100;
+    color: white;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo img {
+    height: 25px;
+    width: 25px;
+}
+
+.nav-logo a {
+    color: white;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-links {
+    font-size: 14px;
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links a:hover {
+    color: #adf3ff;
+}
+
+.about-container {
+    padding: 40px 30px;
+    max-width: 800px;
+}
+
+.about-container h1 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 30px;
+    font-family: "Google Sans Flex", sans-serif;
+    font-weight: 700;
+}
+
+.about-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: white;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-family: "Google Sans Flex", sans-serif;
+}
+
+.profile-pic {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.skills-container {
+    padding: 48px 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skills-container h1 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 24px;
+    font-family: "Google Sans Flex", sans-serif;
+    font-weight: 700;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.skill {
+    background-color: rgba(0,0,0,0.45);
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.skill-name {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: white;
+    font-family: "Azeret Mono", monospace;
+}
+
+.skill-bar {
+    background: rgba(255,255,255,0.12);
+    height: 10px;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background: linear-gradient(90deg, #4ad0ff, #7b6bff);
+    border-radius: 999px;
+    transition: width 600ms ease;
+}
+
+/* optional: make bars animate when page loads */
+@media (prefers-reduced-motion: no-preference) {
+    .skill-level { width: 0; }
+    .skill-level[style] {
+        /* delay ensures CSS transition shows */
+        animation: fillBar 700ms forwards;
+    }
+    @keyframes fillBar {
+        to { width: var(--target-width); }
+    }
+}
+
+.contact-container {
+    max-width: 760px;
+    margin: 48px auto;
+    padding: 24px;
+}
+
+.contact-container h1 {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 16px;
+    font-family: "Google Sans Flex", sans-serif;
+    font-weight: 700;
+}
+
+.contact-form {
+    display: grid;
+    gap: 12px;
+    background: rgba(0,0,0,0.45);
+    padding: 18px;
+    border-radius: 8px;
+}
+
+.contact-form label {
+    font-size: 13px;
+    color: #dfeff6;
+    font-family: "Azeret Mono", monospace;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    font-family: "Google Sans Flex", sans-serif;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #74e3ff;
+    box-shadow: 0 0 0 4px rgba(116,227,255,0.04);
+}
+
+.btn-primary {
+    background: linear-gradient(90deg,#4ad0ff,#7b6bff);
+    color: #031018;
+    border: none;
+    padding: 10px 14px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 120px;
+    justify-self: start;
+}
+
+/* small screens */
+@media (max-width: 600px) {
+    .contact-container { margin: 24px; padding: 16px; }
+}

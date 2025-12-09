@@ -1,0 +1,47 @@
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Google+Sans+Flex:opsz,wdth,wght,GRAD,ROND@6..144,112.5,1..1000,100,100&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>Shaurya | Contact</title>
+    </head>
+
+    <body>
+        <navbar>
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="logo">
+                <a href="index.html">Shaurya</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="about.html">About me</a></li>
+                <li><a href="skills.html">My Skills</a></li>
+                <li><a href="contact.html">Contact me</a></li>
+            </ul>
+        </navbar>
+
+        <main class="contact-container">
+            <h1>Contact</h1>
+
+            <form class="contact-form" action="#" method="post">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required>
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+                <label for="subject">Subject</label>
+                <input id="subject" name="subject" type="text" placeholder="Subject">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Write your message..." required></textarea>
+
+                <button type="submit" class="btn-primary">Send</button>
+            </form>
+        </main>
+    </body>
+
+</html>
